@@ -1,0 +1,17 @@
+def pairwise_distance(x):
+    return np.abs(x[:, None] - x[None, :])
+
+
+def interaction_matrix(distance, sigma):
+    W = np.exp(-(distance ** 2) / (2 * sigma ** 2))
+    np.fill_diagonal(W, 0)
+    return W
+
+
+def update_population(x, W, learning_rate):
+    delta = np.sum(
+        W * (x[None, :] - x[:, None]),
+        axis=1
+    )
+
+    return x + learning_rate * delta
