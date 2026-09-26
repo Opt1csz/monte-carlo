@@ -8,15 +8,20 @@ final class CivSimulationTest {
 
     private CivSimulation make() {
         return new CivSimulation(
-                100, 1000, 0.30, 42L,
-                50.0, 2.0, 1.0,
-                0.70, 0.60, 0.55,
-                0.75, 0.06,
-                0.045, 0.050, 0.020, 0.080, 0.00035, 16,
-                0.03, 0.08, 0.20,
-                0.20, 0.004, 0.10
-        );
-    }
+            100, 1000, 0.30, 42L,
+            8,                       // spatialCells (NEW)
+            50.0, 2.0, 1.0,
+            0.70, 0.60, 0.55,
+            0.75, 0.06,
+            0.045, 0.050, 0.020, 0.080, 0.00035,
+            0.0005,                  // ageDeathScale (NEW)
+            16,
+            0.03, 0.08, 0.20,
+            0.20, 0.004, 0.10,
+            0.05, 0.02, 0.05,        // progressionBase, progressionResourceScale, progressionDiversityBonus (NEW)
+            0.10, 0.30               // stockpileDepositFraction, stockpileWithdrawFraction (NEW)
+    );
+}
 
     @Test
     void startsWithTwoDemographics() {

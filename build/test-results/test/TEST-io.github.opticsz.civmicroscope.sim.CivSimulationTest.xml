@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.opticsz.civmicroscope.sim.CivSimulationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-26T21:24:15.511Z" hostname="HUZI" time="0.047">
+  <properties/>
+  <testcase name="violenceAndProgressionAreTrackedSeparately()" classname="io.github.opticsz.civmicroscope.sim.CivSimulationTest" time="0.028"/>
+  <testcase name="startsWithTwoDemographics()" classname="io.github.opticsz.civmicroscope.sim.CivSimulationTest" time="0.001"/>
+  <testcase name="populationCanChange()" classname="io.github.opticsz.civmicroscope.sim.CivSimulationTest" time="0.005"/>
+  <testcase name="traitsRemainBounded()" classname="io.github.opticsz.civmicroscope.sim.CivSimulationTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,75 @@
+# CivMicroscope - Paper 1.21.11 / Java 21
+# Minecraft is only the visual microscope. The simulation is the source of truth.
+
+world: world
+center-x: 0
+center-z: 0
+view-radius: 120.0
+
+simulation:
+  initial-population: 400
+  max-population: 4000
+  # This is the INITIAL mean prejudice. Individual prejudice then evolves.
+  prejudice: 0.30
+  spatial-cells: 16
+  ticks-per-year: 40
+  seed: 42
+
+  resource:
+    initial-per-agent: 50.0
+    production-per-worker: 2.0
+    consumption-per-year: 1.0
+    stockpile-deposit-fraction: 0.09
+    stockpile-withdraw-fraction: 0.35
+
+  behaviour:
+    base-work-probability: 0.70
+    interaction-rate-per-agent-year: 0.60
+    base-cooperation: 0.55
+
+  inheritance:
+    strength: 0.75
+    mutation-sd: 0.06
+    # How strongly recent interaction outcomes move behavioural traits.
+    trait-learning-rate: 0.03
+
+  demography:
+    birth-rate: 0.045
+    resource-birth-bonus: 0.050
+    death-rate: 0.020
+    scarcity-death-penalty: 0.080
+    age-death-scale: 0.00035
+    reproductive-age: 16
+
+  social:
+    violence-base: 0.03
+    violence-scarcity: 0.08
+    violence-prejudice: 0.20
+    cooperation-prejudice-reduction: 0.035
+    contact-prejudice-reduction: 0.012
+    violence-prejudice-increase: 0.055
+
+  outcomes:
+    progression-base: 0.20
+    progression-resource-scale: 0.004
+    progression-diversity-bonus: 0.10
+
+visual:
+  persons-per-villager: 5
+  max-villagers-per-group: 60
+  update-every-ticks: 2
+  retarget-every-ticks: 20
+  follow-strength: 0.16
+  movement-noise: 1.6
+  vertical-offset: 1.0
+  show-names: true
+  glowing: true
+  show-stockpile-labels: true
+
+event-follow:
+  enabled: true
+  # /view follows high-impact events automatically.
+
+export:
+  enabled: true
+  # Files are written to plugins/CivMicroscope/state/

@@ -11,10 +11,11 @@ repositories {
 }
 
 dependencies {
-    // The plugin only uses the public Paper/Bukkit API; no NMS/userdev needed.
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testImplementation(platform("org.junit:junit-bom:5.11.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 java {
