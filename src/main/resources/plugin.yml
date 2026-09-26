@@ -1,0 +1,21 @@
+name: CivMicroscope
+version: '${version}'
+main: io.github.opticsz.civmicroscope.CivMicroscopePlugin
+description: Live Minecraft microscope for the stochastic civilization simulation.
+author: Opt1csz
+api-version: '1.21'
+
+commands:
+  civ:
+    description: Control the civilization simulation and live microscope.
+    usage: /civ <start|stop|reset|stats|view>
+    permission: civmicroscope.admin
+  view:
+    description: Follow important civilization events.
+    usage: /view [on|off|now]
+    permission: civmicroscope.admin
+
+permissions:
+  civmicroscope.admin:
+    description: Allows control of the simulation and microscope.
+    default: op
